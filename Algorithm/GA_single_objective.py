@@ -2,7 +2,6 @@
 import numpy as np
 import random
 import copy
-from Params import args
 from Shop_Floor.Job_Shop import Job_shop
 from Shop_Floor.Fuzzy_time_operator import *
 from fuzzy_Gantt import *
@@ -21,6 +20,7 @@ class GA:
         self.Best_Cmax=9999
 
     def Chromo_setup(self):
+        args=self.args
         self.os_list = []
         for i in range(len(args.O_num)):
             self.os_list.extend([i for _ in range(args.O_num[i])])
@@ -198,7 +198,3 @@ class GA:
         plt.xlabel("step")
         plt.ylabel("makespan")
         return Best_Fit
-
-if __name__=="__main__":
-    ga=GA(args)
-    ga.main()

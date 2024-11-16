@@ -1,6 +1,6 @@
 import argparse
 from Instance.base_instance import *
-
+from Algorithm.GA_single_objective import GA
 parser = argparse.ArgumentParser()
 
 #params for FJSPF:
@@ -18,4 +18,5 @@ parser.add_argument('--pc',default=0.8,type=float,help='Crossover rate')
 parser.add_argument('--pm',default=0.1,type=float,help='mutation rate')
 parser.add_argument('--N_elite',default=10,type=int,help='Elite number')
 args = parser.parse_args()
-
+ga=GA(args)
+ga.main()

@@ -3,7 +3,6 @@ Code Time: 2022/5/4 10:36
 by: Aihong-Sun
 use for: Job shop describe
 '''
-from Params import args
 from Shop_Floor.Machine import Machine
 from Shop_Floor.Job import Job
 from Shop_Floor.Fuzzy_time_operator import *
